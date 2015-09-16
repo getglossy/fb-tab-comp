@@ -6410,7 +6410,7 @@ button.close {
 }
 
 .midForm {
-    /*background: url('../images/midForm.jpg');*/
+    background: url('../images/midForm.jpg');
     background-color: #FFF !important;
     background-size: 100%;
 }

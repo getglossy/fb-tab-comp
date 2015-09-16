@@ -64,19 +64,19 @@ if (!isset($_POST['submit'])) {
             <form id="theform" method="post" enctype="multipart/form-data">
 
                 <div class="form-group first">
-                    <input type="text" class="form-control first_name" name="first_name" placeholder="First Name*">
-                    <input type="text" class="form-control last_name" name="last_name" placeholder="Last Name*">
+                    <input type="text" class="form-control first_name" name="first_name" id="first_name" placeholder="First Name*">
+                    <input type="text" class="form-control last_name" name="last_name" id="last_name" placeholder="Last Name*">
                 </div>
 
                 <div class="form-group second">
-                    <input type="text" class="form-control email" name="email" placeholder="Email*">
-                    <input type="text" class="form-control address" name="address" placeholder="Street Address*">
+                    <input type="text" class="form-control email" name="email" id="email" placeholder="Email*">
+                    <input type="text" class="form-control address" name="address" id="address" placeholder="Street Address*">
                 </div>
 
                 <div class="form-group">
-                    <input type="text" class="form-control suburb" name="suburb" placeholder="Suburb*">
+                    <input type="text" class="form-control suburb" name="suburb" id="suburb" placeholder="Suburb*">
 
-                    <select class="selectpicker state" name="state">
+                    <select class="selectpicker state" id="state" name="state">
                         <option value="">State*</option>
                         <option value="WA">WA</option>
                         <option value="NT">NT</option>
@@ -88,11 +88,11 @@ if (!isset($_POST['submit'])) {
                         <option value="ACT">ACT</option>
                     </select>
 
-                    <input type="text" class="form-control postcode" name="postcode" placeholder="Postcode*"
+                    <input type="text" class="form-control postcode" name="postcode" id="postcode" placeholder="Postcode*"
                            maxlength="4">
                 </div>
 
-                <label for="day" class="dob">Date of birth*</label>
+                <label for="day" class="dob" id="dob">Date of birth*</label>
 
                 <div class="form-group">
                     <select class="selectpicker day" name="day" id="day">
@@ -225,12 +225,12 @@ if (!isset($_POST['submit'])) {
 
                 <div class="form-group" style="padding-top: 9px;width: 99.7%;">
                     <textarea class="form-control question" name="question"
-                              placeholder="<?php echo $creativeQuestion[0];?>" rows="5"></textarea>
+                              placeholder="<?php echo $creativeQuestion[0];?>" rows="5" id="question"></textarea>
                 </div>
 
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" name="tandc" class="terms"> I agree to the <a data-toggle="modal"
+                        <input type="checkbox" name="tandc" class="terms" id="tandc"> I agree to the <a data-toggle="modal"
                                                                                              data-target="#myModal">Terms
                             & Conditions</a>.*<br/>
                         <span id="tandcSmall"> Open to Aus res. 13+. Entries close at 11.59pm AEDT <?php echo $endDate[0];?>.</span>
@@ -239,7 +239,7 @@ if (!isset($_POST['submit'])) {
 
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" name="signup" checked> Sign up to our STYLE HQ
+                        <input type="checkbox" name="signup"> Sign up to our Database!
                     </label>
                 </div>
 
@@ -283,6 +283,7 @@ if (!isset($_POST['submit'])) {
     <script src="js/jquery-validate.bootstrap-tooltip.js"></script>
     <script src="js/Analytics.js"></script>
     <script src="js/jquery.rwdImageMaps.min.js"></script>
+    <script src="js/autofill.js"></script>
 
     <script>
         $(document).ready(function (e) {
